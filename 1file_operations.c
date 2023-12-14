@@ -8,12 +8,12 @@
 */
 void file_reading(FILE *fild)
 {
-	char buff[1024];
+	char *buff = NULL;
 	int num, format = 0;
+	size_t length = 0;
 
-	for (num = 1; fgets(buff, sizeof(buff), fild) != NULL; num++)
+	for (num = 1; getline(&buff, &length, fild) != -1; num++)
 	{
-		buff[strcspn(buff, "\n")] = '\0';
 		format = arg_parse(buff, num, format);
 	}
 }
