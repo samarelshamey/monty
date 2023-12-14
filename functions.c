@@ -22,6 +22,10 @@ void function_find(char *op, char *v, int len, int format)
 		{"swap", node_swaping},
 		{"add", node_add},
 		{"nop",  nop},
+		{"sub", node_sub},
+		{"div", node_div},
+		{"mul", node_mul},
+		{"mod", node_mod},
 		{NULL, NULL}
 	};
 	if (op[0] == '#')
