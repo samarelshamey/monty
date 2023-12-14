@@ -46,6 +46,7 @@ int arg_parse(char *buff, int num, int form);
 void file_reading(FILE *fild);
 void error1(int code, ...);
 void error2(int code, ...);
+void op_err(int code, ...);
 stack_t *node_cr(int n);
 void nodes_free(void);
 void stack_printing(stack_t **stk, unsigned int num);
