@@ -73,7 +73,7 @@ void error2(int code, ...)
 	exit(EXIT_FAILURE);
 }
 /**
- * operration_error - print error msg
+ * op_err - print error msg
  * @code: error code
  * Return: void
 */
