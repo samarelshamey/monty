@@ -46,7 +46,7 @@ void node_swaping(stack_t **stk, unsigned int num)
 	stack_t *ptr;
 
 	if (*stk == NULL || stk == NULL || (*stk)->next == NULL)
-		error2(4, num, "swap");
+		error2(4, num);
 	ptr = (*stk)->next;
 	(*stk)->next = ptr->next;
 	if (ptr->next != NULL)
