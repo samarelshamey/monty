@@ -1,7 +1,5 @@
 #include "monty.h"
 
-stack_t *h;
-
 /**
  * stack_add - add node to stack
  * @node: node to be added
