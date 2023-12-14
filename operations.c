@@ -12,7 +12,7 @@ void node_add(stack_t **stk, unsigned int num)
 
 	if (*stk == NULL || stk == NULL || (*stk)->next == NULL)
 		error2(4, num, "add");
-	(*stk) = (*stk)->next;
+	*stk = (*stk)->next;
 	sum = (*stk)->n + (*stk)->prev->n;
 	(*stk)->n = sum;
 	free((*stk)->prev);
@@ -29,8 +29,8 @@ void node_sub(stack_t **stk, unsigned int num)
 	int result;
 
 	if (*stk == NULL || stk == NULL || (*stk)->next == NULL)
-		error2(4, num, "add");
-	(*stk) = (*stk)->next;
+		error2(4, num, "sub");
+	*stk = (*stk)->next;
 	result = (*stk)->n - (*stk)->prev->n;
 	(*stk)->n = result;
 	free((*stk)->prev);
@@ -47,10 +47,10 @@ void node_div(stack_t **stk, unsigned int num)
 	int div;
 
 	if (*stk == NULL || stk == NULL || (*stk)->next == NULL)
-		error2(4, num, "add");
+		error2(4, num, "div");
 	if ((*stk)->n == 0)
 		error2(5, num);
-	(*stk) = (*stk)->next;
+	*stk = (*stk)->next;
 	div = (*stk)->n / (*stk)->prev->n;
 	(*stk)->n = div;
 	free((*stk)->prev);
@@ -68,7 +68,7 @@ void node_mul(stack_t **stk, unsigned int num)
 
 	if (*stk == NULL || stk == NULL || (*stk)->next == NULL)
 		error2(4, num, "mul");
-	(*stk) = (*stk)->next;
+	*stk = (*stk)->next;
 	mul = (*stk)->n * (*stk)->prev->n;
 	(*stk)->n = mul;
 	free((*stk)->prev);
@@ -88,7 +88,7 @@ void node_mod(stack_t **stk, unsigned int num)
 		error2(4, num, "mod");
 	if ((*stk)->n == 0)
 		error2(5, num);
-	(*stk) = (*stk)->next;
+	*stk = (*stk)->next;
 	mod = (*stk)->n % (*stk)->prev->n;
 	(*stk)->n = mod;
 	free((*stk)->prev);

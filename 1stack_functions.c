@@ -11,7 +11,7 @@ void stack_add(stack_t **node, __attribute__((unused))unsigned int len)
 	stack_t *ptr;
 
 	if (*node == NULL || node == NULL)
-		 exit(EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	if (h == NULL)
 	{
 		h = *node;
