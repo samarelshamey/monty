@@ -4,14 +4,15 @@
  * stack_add - add node to stack
  * @node: node to be added
  * @len: line number
- * Retur: nothing
+ * Return: nothing
 */
+
 void stack_add(stack_t **node, __attribute__((unused))unsigned int len)
 {
 	stack_t *ptr;
 
 	if (*node == NULL || node == NULL)
-		exit(EXIT_FAILURE);
+		 exit(EXIT_FAILURE);
 	if (h == NULL)
 	{
 		h = *node;
@@ -22,6 +23,7 @@ void stack_add(stack_t **node, __attribute__((unused))unsigned int len)
 	h->next = ptr;
 	ptr->prev = h;
 }
+
 /**
  * top_pop - delete node
  * @stk: pointer to top of stack
@@ -36,7 +38,7 @@ void top_pop(stack_t **stk, unsigned int num)
 		error2(3, num);
 	ptr = *stk;
 	*stk = ptr->next;
-	if(*stk != NULL)
+	if (*stk != NULL)
 		(*stk)->prev = NULL;
 	free(ptr);
 }
