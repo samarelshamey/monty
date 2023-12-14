@@ -16,6 +16,7 @@ void file_reading(FILE *fild)
 	{
 		format = arg_parse(buff, num, format);
 	}
+	free(buff);
 }
 /**
  * file_opening - function to open a file
